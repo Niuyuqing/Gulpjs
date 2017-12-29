@@ -84,7 +84,7 @@ gulp.task('css', function () {
 gulp.task('img', function () {  
     gulp.src('./src/img/*.*')  
         .pipe(changed('dist/img', {hasChanged: changed.compareSha1Digest}))  
-        .pipe(imageMin({  
+        .pipe(imagemin({  
             progressive: true,// 无损压缩JPG图片  
             svgoPlugins: [{removeViewBox: false}], // 不移除svg的viewbox属性  
             use: [pngquant()] // 使用pngquant插件进行深度压缩  
