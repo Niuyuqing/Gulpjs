@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')({lazy: true});  //自动require你在package.json中声明的依赖  
+var $ = require('gulp-load-plugins')({lazy: true});  //自动require你在package.json中声明的依赖 ,加载gulp-load-plugins的时候传入了{lazy: true}参数，这个参数可以让gulp的插件按需加载
 var browserSync = require("browser-sync").create(),   //浏览器实时刷新
 	changed = require("gulp-changed"),
 	pngquant = require('imagemin-pngquant'),  // 深度压缩
