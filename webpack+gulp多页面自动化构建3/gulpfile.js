@@ -40,7 +40,7 @@ gulp.task('ejs', function() {
         minifyCSS: true//压缩页面CSS
     };
 	
-    gulp.src('app/**/*.ejs')
+    gulp.src('app/*.ejs')
     	.pipe(ejs({},{},{ext: '.html'}))   //以HTML文件输出
         .pipe(ejs())
    		.pipe(gulp.dest('build'))
@@ -94,7 +94,7 @@ gulp.task('connect', function() {
 })
 //定义看守任务
 gulp.task('watch', function() {
-	gulp.watch('app/**/*.ejs', ["ejs"]);
+	gulp.watch('app/*.ejs', ["ejs"]);
 	gulp.watch("app/js/**/*.js", ["js"]);
 	gulp.watch("app/less/**/*.less", ["css"]);
 	gulp.watch("app/images/**/*", ["assets"]);
